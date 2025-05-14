@@ -61,5 +61,27 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvName" />
 
+    <Button
+        android:id="@+id/btnVerUbis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="70dp"
+        android:backgroundTint="#752006"
+        android:layout_marginTop="30dp"
+        android:text="Ver Ubicaciones"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTipo1" />
+
+    <Button
+        android:id="@+id/btnAñadirUbi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginHorizontal="70dp"
+        android:backgroundTint="#752006"
+        android:text="Añadir Ubicacion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnVerUbis" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

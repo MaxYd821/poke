@@ -1,5 +1,6 @@
 package com.example.poke;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
@@ -47,6 +48,17 @@ public class DetallepokActivity extends AppCompatActivity {
 
         int id = extractIdFromUrl(url);
         fetchPokemonDetails(id);
+
+        findViewById(R.id.btnVerUbis).setOnClickListener(v -> {
+            Intent intent = new Intent(DetallepokActivity.this, MapsActivity.class);
+            intent.putExtra("pokemonId", String.valueOf(id)); // Pasa el ID del Pokémon
+            startActivity(intent);
+        });
+
+        findViewById(R.id.btnAñadirUbi).setOnClickListener(v -> {
+            Intent intent = new Intent(DetallepokActivity.this, FormUbicacionActivity.class);
+            startActivity(intent);
+        });
     }
 
     private int extractIdFromUrl(String url) {
